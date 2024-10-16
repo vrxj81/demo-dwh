@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5435,
+      "driver": "PostgreSQL",
+      "name": "northwind",
+      "database": "northwind",
+      "username": "northwind"
+    }
+  ]
+}

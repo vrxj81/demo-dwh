@@ -17,3 +17,19 @@ plugins:
       user: northwind
       database: northwind
       port: 5435
+    select:
+    - public-shippers.*
+    - public-suppliers.*
+    - public-customers.*
+    - public-employees.*
+    - public-orders.*
+    - public-order-details.*
+    - public-products.*
+    - public-categories.*
+    - public-regions.*
+    - public-territories.*
+    - public-employee_territories.*
+    - public-us_states.*
+    - public-customer_demographics.*
+    - public-customer_customer_demo.*
+
