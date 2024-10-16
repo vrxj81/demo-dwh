@@ -33,3 +33,14 @@ plugins:
     - public-customer_demographics.*
     - public-customer_customer_demo.*
 
+  loaders:
+  - name: target-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-target-postgres
+  - name: target-dwh
+    inherit_from: target-postgres
+    config:
+      host: localhost
+      user: dwh
+      database: dwh
+      port: 5433
