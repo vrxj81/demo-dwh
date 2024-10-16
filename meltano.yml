@@ -44,3 +44,7 @@ plugins:
       user: dwh
       database: dwh
       port: 5433
+  utilities:
+  - name: dbt-postgres
+    variant: dbt-labs
+    pip_url: dbt-core dbt-postgres meltano-dbt-ext~=0.3.0
