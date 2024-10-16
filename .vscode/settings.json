@@ -8,6 +8,15 @@
       "name": "northwind",
       "database": "northwind",
       "username": "northwind"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5433,
+      "driver": "PostgreSQL",
+      "name": "dwh",
+      "database": "dwh",
+      "username": "dwh"
     }
   ]
 }
