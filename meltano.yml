@@ -5,3 +5,15 @@ environments:
 - name: dev
 - name: staging
 - name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+  - name: source-northwind
+    inherit_from: tap-postgres
+    config:
+      host: localhost
+      user: northwind
+      database: northwind
+      port: 5435
