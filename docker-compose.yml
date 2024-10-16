@@ -1,0 +1,11 @@
+services:
+  source-nw:
+    image: arm64v8/postgres:alpine
+    environment:
+      - POSTGRES_USER=northwind
+      - POSTGRES_PASSWORD=nw1234
+      - POSTGRES_DB=northwind
+    ports:
+      - "5435:5432"
+    volumes:
+      - ./pg-nw:/docker-entrypoint-initdb.d
