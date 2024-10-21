@@ -23,15 +23,15 @@ plugins:
     - public-customers.*
     - public-employees.*
     - public-orders.*
-    - public-order-details.*
+    - public-order_details.*
     - public-products.*
     - public-categories.*
-    - public-regions.*
     - public-territories.*
     - public-employee_territories.*
     - public-us_states.*
     - public-customer_demographics.*
     - public-customer_customer_demo.*
+    - public-region.*
 
   loaders:
   - name: target-postgres
@@ -44,7 +44,14 @@ plugins:
       user: dwh
       database: dwh
       port: 5433
+      threads: 4
   utilities:
   - name: dbt-postgres
     variant: dbt-labs
     pip_url: dbt-core dbt-postgres meltano-dbt-ext~=0.3.0
+    config:
+      host: localhost
+      port: 5433
+      user: dwh
+      schema: dwh
+      database: dwh

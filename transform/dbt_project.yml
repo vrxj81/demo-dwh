@@ -7,23 +7,25 @@ flags:
   send_anonymous_usage_stats: False
   use_colors: True
 model-paths:
-- models
+  - models
 analysis-paths:
-- analysis
+  - analysis
 test-paths:
-- tests
+  - tests
 seed-paths:
-- data
+  - data
 macro-paths:
-- macros
+  - macros
 snapshot-paths:
-- snapshots
-target-path: ../.meltano/transformers/dbt/target
+  - snapshots
 log-path: logs
 packages-install-path: dbt_packages
 clean-targets:
-- ../.meltano/transformers/dbt/target
-- dbt_packages
-- logs
+  - dbt_packages
+  - logs
+
 models:
-  my_meltano_project: null
+  my_meltano_project:
+    staging_northwind:
+      +schema: staging_northwind
+      +materialized: view

@@ -1,0 +1,11 @@
+config-version: 2
+version: 2
+sources:
+  - name: source-northwind
+    schema: source_northwind
+    tables:
+      - name: customers
+      - name: employees
+      - name: orders
+      - name: products
+      - name: order_details
