@@ -29,3 +29,9 @@ models:
     staging_northwind:
       +schema: staging_northwind
       +materialized: view
+    raw_vault:
+      +schema: rdv
+      +materialized: incremental
+    business_vault:
+      +schema: bdv
+      +materialized: view
