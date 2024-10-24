@@ -39,3 +39,6 @@ models:
     information_marts:
       +schema: im
       +materialized: view
+    ellie:
+      +schema: ellie_metadata
+      +materialized: view
