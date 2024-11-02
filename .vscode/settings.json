@@ -19,5 +19,8 @@
       "username": "dwh"
     }
   ],
-  "dbt.enableNewLineagePanel": true
+  "dbt.enableNewLineagePanel": true,
+  "terminal.integrated.env.osx": {
+    "DBT_PROFILES_DIR": "/Users/johanvrolix/Optimalist/meltano/demo-dwh/.meltano/transformers/dbt",
+  },
 }

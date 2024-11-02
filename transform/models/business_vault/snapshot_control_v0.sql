@@ -5,7 +5,7 @@
 }}
 
 {%- set yaml_metadata -%}
-start_date: '1996-08-01'
+start_date: '2024-10-24'
 daily_snapshot_time: '07:30:00'
 {%- endset -%}
 

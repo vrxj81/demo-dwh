@@ -1,6 +1,6 @@
 version: 1
 env:
-  DBT_CLEAN_PROJECT_FILES_ONLY: "false"
+  DBT_CLEAN_PROJECT_FILES_ONLY: 'false'
 default_environment: dev
 project_id: e7660772-c6df-4e04-9a94-21281710aba6
 environments:
@@ -35,6 +35,17 @@ plugins:
     - public-customer_customer_demo.*
     - public-region.*
 
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk
+  - name: ellie-metadata
+    inherit_from: tap-rest-api-msdk
+    config:
+      api_url: https://optimalist.ellie.ai
+      streams:
+        - name: metadata
+          path: /api/v1/models/$ELLIE_ID
+          primary_keys: ["model_modelId"]
   loaders:
   - name: target-postgres
     variant: meltanolabs

@@ -1,0 +1,7 @@
+version: 2
+config-version: 2
+sources: 
+  - name: ellie
+    schema: ellie_metadata
+    tables:
+     - name: metadata
