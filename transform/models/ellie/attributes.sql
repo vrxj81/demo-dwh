@@ -16,9 +16,9 @@ attributes AS (
         attribute ->> 'name' AS attribute_name,
         (attribute ->> 'order')::int AS attribute_order,
         (attribute -> 'metadata' ->> 'PK')::boolean AS is_pk,
-        (attribute -> 'metadata' ->> 'FK')::boolean AS is_fk
+        (attribute -> 'metadata' ->> 'FK')::boolean AS is_fk,
         attribute ->> 'created_at' AS attribute_created_at,
-        attribute ->> 'updated_at' AS attribute_updated_at,
+        attribute ->> 'updated_at' AS attribute_updated_at
     FROM entities e,
     LATERAL jsonb_array_elements(e.attributes_json) AS attribute
 )
