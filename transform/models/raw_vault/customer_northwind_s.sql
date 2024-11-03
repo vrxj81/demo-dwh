@@ -10,6 +10,7 @@ parent_hashkey: hk_customer_h
 src_hashdiff: hd_customer_s
 src_payload:
   - company_name
+  - contact_name
   - contact_title
   - address
   - city
