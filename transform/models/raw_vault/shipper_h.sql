@@ -6,9 +6,14 @@
 
 {%- set yaml_metadata -%}
 source_models:
-  stg_orders
+  - name: stg_orders
+    bk_columns:
+      - ship_via
+  - name: stg_shippers
+    bk_columns:
+      - shipper_id
 hashkey: hk_shipper_h
-business_keys: ship_via
+business_keys: shipper_bk
 {% endset %}
 
 {%- set metadata_dict = fromyaml(yaml_metadata) -%}
